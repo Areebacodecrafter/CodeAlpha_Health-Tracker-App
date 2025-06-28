@@ -1,0 +1,122 @@
+:root {
+  --primary: #6D90A6;
+  --secondary: #254559;
+  --light: #ffffff;
+  --dark: #011526;
+  --accent: #D9D2B0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: var(--primary);
+  color: var(--dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--secondary);
+  color: var(--light);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: var(--dark);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+input {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+}
+
+button[type="submit"],
+#toggle-theme {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#workouts li {
+  margin: 0.5rem 0;
+}
+
+.profile-card {
+  background: var(--accent);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.loading {
+  font-style: italic;
+}
+
+.splash {
+  position: fixed;
+  background: var(--primary);
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.quote-box {
+  text-align: center;
+  background: var(--light);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.sub {
+  margin-top: 1rem;
+  color: var(--secondary);
+}

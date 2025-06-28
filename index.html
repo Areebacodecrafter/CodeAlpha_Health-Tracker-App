@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Health Tracker</h1>
+      <button id="toggle-theme">Toggle Theme</button>
+    </header>
+
+    <nav>
+      <button class="tab active" data-tab="dashboard">🏠 Dashboard</button>
+      <button class="tab" data-tab="progress">📈 Progress</button>
+      <button class="tab" data-tab="profile"> Profile</button>
+    </nav>
+
+    <section id="dashboard" class="tab-content active">
+      <h2>Workout History</h2>
+      <ul id="workouts"></ul>
+    </section>
+
+    <section id="progress" class="tab-content">
+      <h2>Workout Duration</h2>
+      <canvas id="summaryChart"></canvas>
+      <h2>Calories Burned</h2>
+      <canvas id="dailyChart"></canvas>
+    </section>
+
+    <section id="profile" class="tab-content">
+      <h2>Update Your Profile</h2>
+      <form id="profile-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="number" name="age" placeholder="Age" required />
+        <input type="number" name="weight" placeholder="Weight (kg)" required />
+        <input type="number" name="height" placeholder="Height (cm)" required />
+        <input type="text" name="goal" placeholder="Fitness Goal" required />
+        <button type="submit">Save Profile</button>
+      </form>
+
+      <div id="profile-display"></div>
+
+      <h2>Log a Workout</h2>
+      <form id="workout-form">
+        <input type="text" name="workout-name" placeholder="Workout Name" required />
+        <input type="number" name="duration" placeholder="Duration (min)" required />
+        <input type="number" name="calories" placeholder="Calories Burned" required />
+        <button type="submit">Add Workout</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Firebase + Chart.js -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
