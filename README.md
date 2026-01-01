@@ -6,14 +6,14 @@ A simple and interactive health tracker web app that lets users record workouts,
 
 ##  Features
 
-- 🌐 Responsive web app with light & dark mode toggle  
-- 👤 Profile input (age, weight, height, fitness goal)  
-- 📈 Dynamic dashboard with real-time Firebase syncing  
-- 📊 Graphs and charts (duration + calories) using Chart.js  
-- 📝 Workout log with live updates  
-- 🎯 Motivational splash screen animation  
-- 🔐 Firebase Firestore integration  
-- 🎨 Custom theme using `#6D90A6`, `#254559`, and `#A9C6D9`
+-  Responsive web app with light & dark mode toggle  
+-  Profile input (age, weight, height, fitness goal)  
+-  Dynamic dashboard with real-time Firebase syncing  
+-  Graphs and charts (duration + calories) using Chart.js  
+-  Workout log with live updates  
+-  Motivational splash screen animation  
+-  Firebase Firestore integration  
+-  Custom theme using `#6D90A6`, `#254559`, and `#A9C6D9`
 
 ---
 
